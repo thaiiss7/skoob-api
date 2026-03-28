@@ -1,0 +1,5 @@
+models:
+    - book
+    - profile
+    - bookshelf
+    - post
