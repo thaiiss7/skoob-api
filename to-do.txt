@@ -1,0 +1,17 @@
+Ideia principal:
+
+models:
+- livros
+- usuários
+- estantes (por user)
+- TBR (por user)
+- histórico de leitura
+
+Ações:
+- cadastrar livros
+- cadastrar usuários
+- login
+- adicionar livros na estante
+- fazer um histórico de leitura
+- avaliar um livro lido
+- buscar livros
