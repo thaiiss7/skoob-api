@@ -8,5 +8,6 @@ public class Profile
     public string Password { get; set; }
     public string ?Bio { get; set; }
     public Bookshelf UserShelf { get; set; }
+    public Guid ShelfId { get; set; }
     public ICollection<ReadingLog> ReadingLogs { get; set; } = [];
 }

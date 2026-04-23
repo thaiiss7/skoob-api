@@ -6,5 +6,7 @@ public class ReadingLog
     public int PagesRead { get; set; }
     public DateTime Time { get; set; }
     public Profile User { get; set; }
+    public Guid UserId { get; set; }
     public BookItem BookRead { get; set; }
+    public Guid BookId { get; set; }
 }
