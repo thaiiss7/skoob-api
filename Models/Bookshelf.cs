@@ -6,4 +6,5 @@ public class Bookshelf
     public Profile Owner { get; set; }
     public Guid OwnerId { get; set; }
     public ICollection<BookItem>? BookItems { get; set; } = [];
+    public ICollection<TBR> TBRs { get; set; } = [];
 }
