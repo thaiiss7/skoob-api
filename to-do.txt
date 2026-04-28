@@ -7,11 +7,26 @@ models:
 - TBR (por user)
 - histórico de leitura
 
-Ações:
-- cadastrar livros
-- cadastrar usuários
-- login
-- adicionar livros na estante
-- fazer um histórico de leitura
-- avaliar um livro lido
-- buscar livros
+Use Cases:
+Profile:
+- cadastrar usuários (CreateProfile)
+- acessar perfil (GetProfileData)
+- login (Login)
+Book:
+- cadastrar livros (CreateBook)
+- buscar livros (GetBook)
+BookItem:
+- avaliar um livro lido (RateBookItem)
+- editar bookitem (EditBookItem)
+- acessar book de um usuário (GetBookItem)
+Bookshelf:
+- criar uma estante (CreateBookshelf)
+- adicionar livros na estante (SaveBook)
+- acessar estante (GetBookshelf)
+ReadingLog:
+- fazer um histórico de leitura (CreateReadingLog)
+- ver registros de um usuário (GetReadingLogs)
+TBR:
+- sistema deve criar uma meta de leitura do ano (CreateTBR)
+- colocar livros na meta do ano (SaveBookAtTBR)
+- acessar meta (GetTBR)
