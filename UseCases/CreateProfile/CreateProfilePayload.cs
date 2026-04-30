@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Skoob.Validations;
 
 namespace Skoob.UseCases.CreateProfile;
 
@@ -15,7 +16,7 @@ public record CreateProfilePayload
 
     [Required]
     [MinLength(6)]
-    // validação de número
+    [NeedNumberAtributte]
     public string Password { get; init; }
 
     [Required]
