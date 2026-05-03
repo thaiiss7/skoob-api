@@ -9,12 +9,12 @@ models:
 
 Use Cases:
 Profile:
-- cadastrar usuários (CreateProfile)
-- acessar perfil (GetProfileData)
-- login (Login)
+- cadastrar usuários (CreateProfile) *
+- acessar perfil (GetProfileData) *
+- login (Login) *
 Book:
-- cadastrar livros (CreateBook)
-- buscar livros (GetBook)
+- cadastrar livros (CreateBook) *
+- buscar livros (GetBookData) *
 BookItem:
 - avaliar um livro lido (RateBookItem)
 - editar bookitem (EditBookItem)

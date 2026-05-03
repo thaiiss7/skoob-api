@@ -8,7 +8,7 @@ public class BookItem
     public float ?Rating { get; set; }
     public Label BookLabel { get; set; }
     public int PagesRead { get; set; } = 0;
-    public bool? Favorite { get; set; }
+    public bool Favorite { get; set; } = false;
     public Book Original { get; set; }
     public Guid OriginalBookId { get; set; }
     public Profile BookOwner { get; set; }

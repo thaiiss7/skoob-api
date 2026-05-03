@@ -7,7 +7,6 @@ public class Book
     public int NumberOfPages { get; set; }
     public string Author { get; set; }
     public string ?About { get; set; }
-    public float ?Rating { get; set; }
     public int Year { get; set; }
     public string? ImageUrl { get; set; }
     public ICollection<BookItem> Items { get; set; } = [];
