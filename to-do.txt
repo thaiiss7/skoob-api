@@ -16,9 +16,8 @@ Book:
 - cadastrar livros (CreateBook) *
 - buscar livros (GetBookData) *
 BookItem:
-- avaliar um livro lido (RateBookItem)
-- editar bookitem (EditBookItem)
-- acessar book de um usuário (GetBookItem)
+- sistema criar um bookitem por usuário (CreateBookItem) *
+- editar bookitem (EditBookItem) *
 Bookshelf:
 - criar uma estante (CreateBookshelf)
 - adicionar livros na estante (SaveBook)

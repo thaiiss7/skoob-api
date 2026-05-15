@@ -11,6 +11,10 @@ public class GetBookDataUseCase(SkoobDbContext ctx)
             .ThenInclude(i => i.Rating)
         .FirstOrDefaultAsync(b => b.Title == payload.Title);
 
+        var user = await ctx.Profiles.FirstOrDefaultAsync(p => p.ID == payload.UserId);
+        
+        bool hasbook = false;
+
         if (book is null)
             return Result<GetBookDataResponse>.Failure("Book not found");
 
@@ -26,6 +30,18 @@ public class GetBookDataUseCase(SkoobDbContext ctx)
         int numberOfRereading = items.Count(i => i.BookLabel == Enums.Label.Rereading);
         int numberOfAbandoned = items.Count(i => i.BookLabel == Enums.Label.Abandoned);
         int NumberOfWantToRead = items.Count(i => i.BookLabel == Enums.Label.ToBeRead);
+
+        var userLabel = Enums.Label.None;
+
+        foreach (var i in user.UserShelf.BookItems)
+        {
+            if(i.OriginalBookId == book.ID)
+            {
+                hasbook = true;
+                userLabel = i.BookLabel;
+                break;
+            }
+        }
         
         var response = new GetBookDataResponse
         (
@@ -41,7 +57,8 @@ public class GetBookDataUseCase(SkoobDbContext ctx)
             numberOfReading,
             numberOfRereading,
             numberOfAbandoned,
-            NumberOfWantToRead
+            NumberOfWantToRead,
+            userLabel
         );
 
         return Result<GetBookDataResponse>.Success(response);

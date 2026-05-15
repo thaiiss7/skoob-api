@@ -23,6 +23,6 @@ public class CreateProfileUseCase
 
         await profileService.Create(profile);
 
-        return Result<CreateProfileResponse>.Success(new());
+        return Result<CreateProfileResponse>.Success(new(profile.ID));
     }
 }

@@ -19,6 +19,6 @@ public class CreateBookUseCase(SkoobDbContext ctx)
         ctx.Books.Add(book);
         await ctx.SaveChangesAsync();
         
-        return Result<CreateBookResponse>.Success(new());
+        return Result<CreateBookResponse>.Success(new(book.ID));
     }
 }

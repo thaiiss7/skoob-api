@@ -1,3 +1,5 @@
+using Skoob.Enums;
+
 namespace Skoob.UseCases.GetBookData;
 
 public record GetBookDataResponse(
@@ -13,5 +15,6 @@ public record GetBookDataResponse(
     int? NumberOfReading,
     int? NumberOfRereading,
     int? NumberOfAbandoned,
-    int? NumberOfWantToRead
+    int? NumberOfWantToRead,
+    Label UserLabel
 );

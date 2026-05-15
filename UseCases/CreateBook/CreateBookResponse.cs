@@ -1,3 +1,5 @@
 namespace Skoob.UseCases.CreateBook;
 
-public record CreateBookResponse;
+public record CreateBookResponse(
+    Guid BookId
+);
